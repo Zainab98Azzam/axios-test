@@ -8,11 +8,11 @@ export default class PersonList extends React.Component {
     name: "",
     id: "",
   };
-  handleChange = (event) => {
+  handleChangePost = (event) => {
     this.setState({ name: event.target.value });
   };
 
-  handleSubmit = (event) => {
+  handleSubmitPost = (event) => {
     event.preventDefault();
 
     const user = {
@@ -57,10 +57,10 @@ export default class PersonList extends React.Component {
           ))}
         </ul>
         <div>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmitPost}>
             <label>
               Person Name:
-              <input type="text" name="name" onChange={this.handleChange} />
+              <input type="text" name="name" onChange={this.handleChangePost} />
             </label>
             <button type="submit">Add</button>
           </form>
