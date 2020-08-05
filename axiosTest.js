@@ -22,7 +22,6 @@ export default class PersonList extends React.Component {
     axios
       .post(`https://jsonplaceholder.typicode.com/users`, { user })
       .then((res) => {
-        console.log(res);
         console.log(res.data);
       });
   };
